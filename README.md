@@ -1,6 +1,12 @@
 # covid19-dashboard
 ## A dashboard built using Vue.js to track latest COVID-19 updates in India.
 
+## Version
+1.0.0
+
+## URL
+https://vue-covid19-tracker.herokuapp.com/
+
 ### Features
 ```
 1. Total number of Confirmed, Active, Recovered and Deceased cases in india.
@@ -8,9 +14,6 @@
 3. Navigate the user to next screen on click of state name and display district wise count
    (Confirmed, Active, Recovered and Deceased)
 ```
-
-## Version
-1.0.0
 
 ## Project setup
 ```

@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .search label {
   color: #6c757d;
   font-size: 0.75rem;

@@ -28,3 +28,11 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+## TO DO 
+Due to time constraints the below items were not completed:
+-Unit Test for all the components
+-Responsiveness in smaller resolutions
+-SCSS variables, mixins
+-Themes: dark mode/light mode
+

@@ -156,7 +156,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .fadeInUp {
   -webkit-animation-duration: 0.45s;
   animation-duration: 0.45s;
@@ -172,18 +172,19 @@ export default {
   justify-content: space-between;
   margin: 1rem 0;
   width: 37rem;
+  .svg-parent {
+    background: transparent !important;
+    width: 25%;
+    align-self: center;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+  }
+  .svg-parent svg {
+    width: 100%;
+  }
 }
-.minigraph .svg-parent {
-  background: transparent !important;
-  width: 25%;
-  align-self: center;
-  border-radius: 5px;
-  display: flex;
-  position: relative;
-}
-.minigraph .svg-parent svg {
-  width: 100%;
-}
+
 @media (max-width: 769px) {
   .minigraph {
     width: calc(100% - 2rem);

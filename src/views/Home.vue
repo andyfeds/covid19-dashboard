@@ -27,7 +27,6 @@
           </div>
           <Level v-bind:total="statewiseData.statewise[0]" />
           <MiniChart v-bind:timeseries="timeseries" />
-          <!-- <Table v-bind:statewise="statewiseData.statewise" /> -->
           <Tracker v-bind:statewise="statewiseData.statewise" />
         </div>
       </v-col>
@@ -37,8 +36,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import Table from "@/components/Table.vue";
 import Tracker from "@/components/Tracker.vue";
 import Level from "@/components/Level.vue";
 import Search from "@/components/Search.vue";
@@ -80,7 +77,6 @@ export default {
       this.timeseries = preprocessTimeseries(
         this.statewiseData.cases_time_series
       );
-      console.log("TIMESERIES", this.timeseries);
     }
   }
 };

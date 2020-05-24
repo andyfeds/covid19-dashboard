@@ -1,5 +1,5 @@
 <template>
-  <v-container class="home grey lighten-5">
+  <v-container class="grey lighten-5">
     <v-row no-gutters>
       <h5 class="table-fineprint fadeInUp" style="animationDelay: '1.5s'">
         Compiled from State Govt. numbers,'
@@ -27,12 +27,12 @@
                     display: column.key === currentSort ? 'initial' : 'none'
                   }"
                 >
-                  <v-icon class="sort" v-if="currentSortDir == 'asc'">{{
-                    "mdi-chevron-up"
-                  }}</v-icon>
-                  <v-icon class="sort" v-if="currentSortDir == 'desc'">{{
-                    "mdi-chevron-down"
-                  }}</v-icon>
+                  <v-icon class="sort" v-if="currentSortDir == 'asc'">
+                    {{ "mdi-chevron-up" }}
+                  </v-icon>
+                  <v-icon class="sort" v-if="currentSortDir == 'desc'">
+                    {{ "mdi-chevron-down" }}
+                  </v-icon>
                 </div>
               </div>
             </th>
@@ -199,166 +199,4 @@ export default {
 };
 </script>
 
-<style>
-.fadeInUp {
-  -webkit-animation-duration: 0.45s;
-  animation-duration: 0.45s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-.table-fineprint {
-  color: rgba(108, 117, 125, 0.6);
-  font-weight: 600;
-  margin: 0 0.25rem 0.25rem 0;
-  text-align: right;
-  font-size: 12px !important;
-}
-.table-fineprint a {
-  border-bottom: 2px solid rgba(108, 117, 125, 0.12549);
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.table {
-  align-self: center;
-  border-collapse: separate;
-  border-spacing: 3px 4px;
-  position: relative;
-  width: 37rem;
-}
-table thead {
-  background: rgba(108, 117, 125, 0.0627451);
-  color: #6c757d;
-  font-size: 0.75rem;
-  text-align: left;
-}
-table thead th {
-  background: #f6f6f7;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0.5rem;
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 5px;
-  transition: all 0.1s ease-in-out;
-}
-table .heading-content {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
-}
-table .heading-content .heading-text {
-  color: #6c757d;
-  text-align: right;
-}
-table tbody {
-  color: #6c757d;
-}
-table tbody tr:nth-child(odd) {
-  background: rgba(108, 117, 125, 0.0627451);
-}
-table tbody tr {
-  cursor: pointer;
-}
-table tbody td:first-child {
-  font-weight: 600;
-  max-width: 7.5rem !important;
-  text-align: left;
-  word-wrap: break-word !important;
-}
-table tbody td {
-  border-radius: 4px;
-  font-size: 0.9rem;
-  padding: 0.25rem;
-  text-align: right;
-}
-table tbody .title-chevron {
-  position: relative;
-}
-table tbody .title-chevron > * {
-  align-self: center;
-}
-table .dropdown {
-  background: rgba(108, 117, 125, 0.0627451);
-  border-radius: 50%;
-  cursor: pointer;
-  height: 13px;
-  left: -1.25rem;
-  position: absolute;
-  top: 0.125rem;
-  transition: background 0.2s ease-in-out;
-  width: 13px;
-}
-table tbody .title-chevron {
-  position: relative;
-}
-.rotateDownRight {
-  -webkit-animation-duration: 0.25s;
-  animation-duration: 0.25s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: rotateDownRight;
-  animation-name: rotateDownRight;
-}
-table .dropdown svg {
-  left: 1px;
-  position: absolute;
-  stroke-width: 3;
-  top: -0.35rem;
-  width: 11px;
-}
-table tbody td .delta {
-  display: inline-block;
-  font-size: 11px !important;
-}
-table tbody td .delta.is-confirmed {
-  color: #ff073a;
-}
-table tbody td .total {
-  margin-left: 0.25rem;
-  font-weight: 500;
-}
-.v-icon .icon-recovered {
-  height: 9px;
-  stroke-width: 3;
-  width: 9px;
-  color: "#ff073a";
-}
-
-table .v-icon.v-icon {
-  font-size: 11px;
-  margin-bottom: 3px;
-}
-table .v-icon.v-icon.is-confirmed {
-  color: #ff073a;
-}
-table .v-icon.v-icon.is-recovered {
-  color: #28a745;
-}
-table .v-icon.v-icon.sort {
-  font-size: 16px;
-  font-weight: 800;
-  margin-top: 5px;
-}
-
-table tbody td .delta.is-deaths {
-  color: #6c757d;
-}
-
-table.arrow-down,
-.arrow-up {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  margin-left: 0.25rem;
-}
-table.arrow-up {
-  border-bottom: 5px solid rgba(108, 117, 125, 0.6);
-}
-table.arrow-down {
-  border-top: 5px solid rgba(108, 117, 125, 0.6);
-}
-</style>
+<style lang="scss" scoped></style>

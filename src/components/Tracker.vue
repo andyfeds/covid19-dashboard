@@ -27,12 +27,12 @@
                     display: column.key === currentSort ? 'initial' : 'none'
                   }"
                 >
-                  <v-icon class="sort" v-if="currentSortDir == 'asc'">
-                    {{ "mdi-chevron-up" }}
-                  </v-icon>
-                  <v-icon class="sort" v-if="currentSortDir == 'desc'">
-                    {{ "mdi-chevron-down" }}
-                  </v-icon>
+                  <v-icon class="sort" v-if="currentSortDir == 'asc'">{{
+                    "mdi-chevron-up"
+                  }}</v-icon>
+                  <v-icon class="sort" v-if="currentSortDir == 'desc'">{{
+                    "mdi-chevron-down"
+                  }}</v-icon>
                 </div>
               </div>
             </th>
@@ -59,7 +59,9 @@
                   </svg>
                 </span>
                 <span
-                  v-on:click="openDistrictTracker(item.statecode)"
+                  v-on:click="
+                    openDistrictTracker(item.statecode, item.lastupdatedtime)
+                  "
                   class="title-icon"
                   >{{ item.state }}</span
                 >
@@ -192,7 +194,8 @@ export default {
         this.currentSort = col;
       }
     },
-    openDistrictTracker: function(statecode) {
+    openDistrictTracker: function(statecode, updatedTime) {
+      localStorage.setItem("lastUpdatedTime", updatedTime);
       this.$router.push({ name: "State", params: { statecode: statecode } });
     }
   }

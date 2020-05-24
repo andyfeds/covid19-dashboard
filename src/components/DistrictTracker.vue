@@ -3,6 +3,14 @@
     <div class="header">
       <div class="header-left fadeInUp" style="animation-delay: 0.3s;">
         <h1>{{ stateName }}</h1>
+        <h5>
+          Last Updated:
+          {{
+            isNaN(Date.parse(formatDate(getLastUpdatedTime())))
+              ? ""
+              : `${formatDateAbsolute(getLastUpdatedTime())} IST`
+          }}
+        </h5>
       </div>
     </div>
     <table class="table table-striped fadeInUp" style="animation-delay: 1.8s;">
@@ -76,6 +84,7 @@
 
 <script>
 import { getStateName } from "../utils/common";
+import { formatDate, formatDateAbsolute } from "../utils/common";
 export default {
   name: "Tracker",
   props: {
@@ -110,7 +119,8 @@ export default {
       ],
       statecode: "",
       stateZones: [],
-      stateName: ""
+      stateName: "",
+      lastUpdatedTime: ""
     };
   },
   mounted() {
@@ -156,6 +166,16 @@ export default {
         }
       }
       return "None";
+    },
+    getLastUpdatedTime: function() {
+      this.lastUpdatedTime = localStorage.getItem("lastUpdatedTime") || "";
+      return this.lastUpdatedTime;
+    },
+    formatDateAbsolute(value) {
+      return formatDateAbsolute(value);
+    },
+    formatDate(value) {
+      return formatDate(value);
     }
   }
 };
@@ -167,7 +187,11 @@ export default {
     margin-bottom: 2rem;
     .header-left h1 {
       color: #e23028;
-      max-width: 20rem;
+      max-width: 30rem;
+    }
+    .header-left h5 {
+      color: #6c757d;
+      font-weight: 600;
     }
   }
   table {

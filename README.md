@@ -5,7 +5,8 @@
 ```
 1. Total number of Confirmed, Active, Recovered and Deceased cases in india.
 2. State wise count for these cases.
-3. Navigate the user to next screen on click of state name and display district wise count   (Confirmed, Active, Recovered and Deceased)
+3. Navigate the user to next screen on click of state name and display district wise count
+   (Confirmed, Active, Recovered and Deceased)
 ```
 
 ## Version
@@ -43,5 +44,6 @@ Unit Test for all the components
 Responsiveness in smaller resolutions
 SCSS variables, mixins
 Themes: dark mode/light mode
+Other features and statistics
 ```
 
